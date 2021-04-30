@@ -1,5 +1,8 @@
 .section {
   position: relative;
+  h2 {
+    margin-top: 0;
+  }
   & + .section {
     margin-top: 6rem;
     &::before {

@@ -77,6 +77,118 @@
     }
   }
 
+  &.axis-showcase {
+    margin: 4rem 0 3rem;
+    &:not(.show-axis) {
+      .main-axis,
+      .cross-axis {
+        display: none;
+      }
+      .showcase-item {
+        opacity: 1 !important;
+      }
+      margin: 0 !important;
+    }
+    .showcase-item {
+      opacity: 0.5;
+    }
+    &.flex-direction-column,
+    &.flex-direction-column-reverse {
+      .main-axis {
+        z-index: 2;
+        width: 4px;
+        height: calc(100% + 4rem);
+      }
+      .cross-axis {
+        width: calc(100% + 4rem);
+        height: 2px;
+      }
+    }
+    &.flex-direction-row,
+    &.flex-direction-row-reverse {
+      .main-axis {
+        z-index: 2;
+        width: calc(100% + 4rem);
+        height: 4px;
+      }
+      .cross-axis {
+        width: 2px;
+        height: calc(100% + 4rem);
+      }
+    }
+    .main-axis,
+    .cross-axis {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 2px black;
+      background-color: var(--text-clr-400);
+      position: absolute;
+    }
+    .main-axis::after {
+      position: absolute;
+      content: "Main Axis";
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .cross-axis::after {
+      position: absolute;
+      content: "Cross Axis";
+    }
+    &.flex-direction-row {
+      .main-axis::after {
+        right: -8rem;
+        top: 50%;
+        transform: translateY(-55%);
+      }
+      .cross-axis::after {
+        bottom: -2rem;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &.flex-direction-row-reverse {
+      .main-axis::after {
+        left: -8rem;
+        top: 50%;
+        transform: translateY(-55%);
+      }
+      .cross-axis::after {
+        bottom: -2rem;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &.flex-direction-column {
+      .main-axis::after {
+        bottom: -2rem;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .cross-axis::after {
+        right: -6rem;
+        top: 50%;
+        transform: translateY(-55%);
+      }
+    }
+    &.flex-direction-column-reverse {
+      .main-axis::after {
+        top: -2rem;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .cross-axis::after {
+        right: -6rem;
+        top: 50%;
+        transform: translateY(-55%);
+      }
+    }
+  }
+
   &.flex-wrap-showcase {
     padding: 1rem;
     gap: 1rem;

@@ -4,9 +4,10 @@ const handleToggleClick = (toggleContainer: HTMLDivElement) => {
   // check if toggle has data-additional-classes attribute. If so then those classes also need to be added/removed
   const hasAdditionalClassesToApply = !!toggle.dataset.additionalClasses;
   const targetElementId = toggle.dataset.targetId;
+  const targetSetClass = toggle.dataset.setClass;
   const targetElement = document.getElementById(targetElementId);
-  // if target element has class "flex-direction-column" then toggle is currently "on"
-  if (targetElement.classList.contains("flex-direction-column")) {
+  // if target element has class that toggle switches then toggle is currently "on"
+  if (targetElement.classList.contains(targetSetClass)) {
     // Toggle is "on" -> remove classes and change state to "off"
     // create list of all the classes that need to be removed
     const classesToRemove: string[] = [];
@@ -14,8 +15,8 @@ const handleToggleClick = (toggleContainer: HTMLDivElement) => {
     if (hasAdditionalClassesToApply) {
       classesToRemove.push(...toggle.dataset?.additionalClasses.split(" "));
     }
-    // by default remove class "flex-direction-column"
-    classesToRemove.push("flex-direction-column");
+    // by default remove main class that was added by toggle
+    classesToRemove.push(targetSetClass);
     // get current data-additional-classes attribute of target element so that we can edit it
     const currentDataAdditionalClasses = targetElement.dataset.additionalClasses.split(" ");
     // create list of classes that stay (aka list of current classes minus those that need to be removed)
@@ -45,8 +46,8 @@ const handleToggleClick = (toggleContainer: HTMLDivElement) => {
     if (hasAdditionalClassesToApply) {
       newClasses.push(...toggle.dataset.additionalClasses?.split(" "));
     }
-    // by default add "flex-direction-column" to the list, cause duh that's the main switcher class
-    newClasses.push("flex-direction-column");
+    // by default add class specified in data-set-class of toggle to the list
+    newClasses.push(targetSetClass);
     // edit target element's data-additional-classes with our new one, basically add needed classes to it
     targetElement.dataset.additionalClasses = newClasses.join(" ");
     // as well as actually apply those classes to target element
