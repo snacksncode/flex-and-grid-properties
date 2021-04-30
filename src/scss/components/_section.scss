@@ -16,4 +16,13 @@
       background-color: var(--bg-clr-200);
     }
   }
+  &.terminology {
+    .terminology__heading {
+      color: var(--text-clr-500);
+      margin-top: 2rem;
+    }
+    .showcase-box.show-axis {
+      margin-top: 1rem;
+    }
+  }
 }

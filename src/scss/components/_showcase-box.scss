@@ -78,7 +78,7 @@
   }
 
   &.axis-showcase {
-    margin: 4rem 0 3rem;
+    margin: 6rem 0 4rem;
     &:not(.show-axis) {
       .main-axis,
       .cross-axis {
@@ -131,6 +131,22 @@
       font-weight: 700;
       font-size: 1.25rem;
     }
+    .main-axis::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      display: block;
+      border: 10px solid;
+      position: absolute;
+    }
+    .cross-axis::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      display: block;
+      border: 8px solid;
+      position: absolute;
+    }
     .cross-axis::after {
       position: absolute;
       content: "Cross Axis";
@@ -141,9 +157,25 @@
         top: 50%;
         transform: translateY(-55%);
       }
+      .main-axis::before {
+        border-right-color: transparent;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+      }
       .cross-axis::after {
         bottom: -2rem;
         white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .cross-axis::before {
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        bottom: -10px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -154,17 +186,41 @@
         top: 50%;
         transform: translateY(-55%);
       }
+      .main-axis::before {
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+      }
       .cross-axis::after {
         bottom: -2rem;
         white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .cross-axis::before {
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        bottom: -10px;
         left: 50%;
         transform: translateX(-50%);
       }
     }
     &.flex-direction-column {
       .main-axis::after {
-        bottom: -2rem;
+        bottom: -3rem;
         white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .main-axis::before {
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        bottom: -20px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -172,12 +228,28 @@
         right: -6rem;
         top: 50%;
         transform: translateY(-55%);
+      }
+      .cross-axis::before {
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
       }
     }
     &.flex-direction-column-reverse {
       .main-axis::after {
-        top: -2rem;
+        top: -3rem;
         white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .main-axis::before {
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        top: -20px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -185,6 +257,14 @@
         right: -6rem;
         top: 50%;
         transform: translateY(-55%);
+      }
+      .cross-axis::before {
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
       }
     }
   }
