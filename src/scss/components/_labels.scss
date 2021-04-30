@@ -1,0 +1,35 @@
+.labels {
+  display: flex;
+  margin: 1rem 0;
+  .label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & + .label {
+      margin-left: 2rem;
+    }
+    .color-circle {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--bg-clr-300);
+      }
+      &--main {
+        background-color: var(--accent-main);
+      }
+      &--secondary {
+        background-color: var(--accent-secondary);
+      }
+    }
+  }
+}

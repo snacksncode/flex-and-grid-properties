@@ -1,0 +1,7 @@
+#grid {
+  --accent-main: var(--red-400);
+  --accent-secondary: var(--yellow-400);
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}

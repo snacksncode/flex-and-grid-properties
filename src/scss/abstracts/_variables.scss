@@ -1,0 +1,27 @@
+//variables should be here
+body {
+  --max-width: 960px;
+  --border-radius: 4px;
+
+  --bg-clr-500: #111111;
+  --bg-clr-400: #222222;
+  --bg-clr-300: #333333;
+  --bg-clr-200: #444444;
+
+  --text-clr-400: #f4f4f4;
+  --text-clr-500: #dddddd;
+  --text-clr-600: #c7c7c7;
+
+  --blue-500: hsl(213, 64%, 50%);
+  --blue-400: hsl(213, 64%, 60%);
+  --blue-300: hsl(213, 64%, 70%);
+
+  --green-400: hsl(110, 50%, 65%);
+  --green-500: hsl(110, 41%, 57%);
+
+  --red-400: hsl(1, 65%, 64%);
+  --red-500: hsl(1, 65%, 50%);
+
+  --yellow-400: hsl(54, 100%, 75%);
+  --yellow-500: hsl(41, 100%, 70%);
+}

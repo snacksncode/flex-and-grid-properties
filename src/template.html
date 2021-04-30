@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpack Configuration</title>
+  </head>
+  <body class="no-transition">
+    <section id="flex" class="container">
+      <h1 class="big-title">FlexBox</h1>
+
+      <!-- TERMINOLOGY -->
+      <div class="terminology section">
+        <h1>Terminology</h1>
+        <div class="showcase-box flex">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+        </div>
+        <div class="labels">
+          <div class="label">
+            <div class="color-circle color-circle--main"></div>
+            <div class="label-text"><b>Flex Container</b> <span class="lowered-opacity">(Flex Parent)</span></div>
+          </div>
+          <div class="label">
+            <div class="color-circle color-circle--secondary"></div>
+            <div class="label-text"><b>Flex Items</b> <span class="lowered-opacity">(Flex Children)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARENT-PROPERTIES -->
+      <div class="section">
+        <h1>Properties for the Parent (flex container)</h1>
+        <ul class="spaced-list">
+          <li>Remember to setup <code>display: flex;</code> on parent for it to be a flex-container</li>
+          <li><code>flex-direction</code></li>
+          <li><code>align-items</code></li>
+          <li><code>justify-content</code></li>
+          <li><code>flex-wrap</code></li>
+        </ul>
+      </div>
+
+      <!-- FLEX-DIRECTION -->
+      <div class="section">
+        <h1>flex-direction</h1>
+        <div class="controls">
+          <div class="button button--active" data-target-id="fd" data-set-class="flex-direction-row">row</div>
+          <div class="button" data-target-id="fd" data-set-class="flex-direction-row-reverse">row-reverse</div>
+          <div class="button" data-target-id="fd" data-set-class="flex-direction-column">column</div>
+          <div class="button" data-target-id="fd" data-set-class="flex-direction-column-reverse">column-reverse</div>
+        </div>
+        <div id="fd" data-additional-classes="flex" class="showcase-box flex">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+        </div>
+      </div>
+
+      <!-- ALIGN-ITEMS -->
+      <div class="section">
+        <h2>align-items</h2>
+        <div class="toggle-flex-direction">
+          <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
+          <div class="toggle" data-target-id="ai">
+            <div class="toggle__ball"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="button" data-target-id="ai" data-set-class="align-items-flex-start">flex-start</div>
+          <div class="button" data-target-id="ai" data-set-class="align-items-flex-end">flex-end</div>
+          <div class="button" data-target-id="ai" data-set-class="align-items-center">center</div>
+          <div class="button button--active" data-target-id="ai" data-set-class="align-items-flex-stretch">stretch</div>
+          <div class="button" data-target-id="ai" data-set-class="align-items-baseline">baseline</div>
+        </div>
+        <div id="ai" data-additional-classes="showcase-box--ai flex" class="showcase-box flex showcase-box--ai">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+        </div>
+      </div>
+
+      <!-- JUSTIFY-CONTENT -->
+      <div class="section">
+        <h2>justify-content</h2>
+        <div class="toggle-flex-direction">
+          <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
+          <div class="toggle" data-additional-classes="static-height" data-target-id="jc">
+            <div class="toggle__ball"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="button button--active" data-target-id="jc" data-set-class="justify-content-flex-start">flex-start</div>
+          <div class="button" data-target-id="jc" data-set-class="justify-content-flex-end">flex-end</div>
+          <div class="button" data-target-id="jc" data-set-class="justify-content-center">center</div>
+          <div class="button" data-target-id="jc" data-set-class="justify-content-space-between">space-between</div>
+          <div class="button" data-target-id="jc" data-set-class="justify-content-space-around">space-around</div>
+          <div class="button" data-target-id="jc" data-set-class="justify-content-space-evenly">space-evenly</div>
+        </div>
+        <div id="jc" data-additional-classes="flex" class="showcase-box flex">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+        </div>
+      </div>
+
+      <!-- JUSTIFY-CONTENT -->
+      <div class="section">
+        <h2>flex-wrap</h2>
+        <div class="toggle-flex-direction">
+          <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
+          <div class="toggle" data-additional-classes="static-height" data-target-id="fw">
+            <div class="toggle__ball"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="button button--active" data-target-id="fw" data-set-class="flex-wrap-nowrap">nowrap</div>
+          <div class="button" data-target-id="fw" data-set-class="flex-wrap-wrap">wrap</div>
+          <div class="button" data-target-id="fw" data-set-class="flex-wrap-wrap-reverse">wrap-reverse</div>
+        </div>
+        <div id="fw" data-additional-classes="flex flex-wrap-showcase" class="showcase-box flex flex-wrap-showcase">
+          <div class="showcase-item">
+            Item 1<br />
+            <span class="small-text">(width: 50%)</span>
+          </div>
+          <div class="showcase-item">
+            Item 2<br />
+            <span class="small-text">(width: 50%)</span>
+          </div>
+          <div class="showcase-item">
+            Item 3<br />
+            <span class="small-text">(width: 50%)</span>
+          </div>
+          <div class="showcase-item">
+            Item 4<br />
+            <span class="small-text">(width: 50%)</span>
+          </div>
+          <div class="showcase-item">
+            Item 5<br />
+            <span class="small-text">(width: 50%)</span>
+          </div>
+          <div class="showcase-item">
+            Item 6<br />
+            <span class="small-text">(width: 50%)</span>
+          </div>
+          <div class="showcase-item">
+            Item 7<br />
+            <span class="small-text">(width: 50%)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHILD-PROPERTIES -->
+      <div class="child-properties section">
+        <h1>Properties for the Children (flex items)</h1>
+        <ul class="spaced-list">
+          <li><code>order</code></li>
+          <li><code>flex-grow</code> <img src="assets/alert-triangle.svg" alt="warning" /></li>
+          <li><code>flex-shrink</code> <img src="assets/alert-triangle.svg" alt="warning" /></li>
+          <li><code>align-self</code></li>
+        </ul>
+      </div>
+
+      <!-- ORDER SHOWCASE -->
+      <div class="section">
+        <h2>order | default: 0</h2>
+        <div class="showcase-box flex">
+          <div class="showcase-item">order: 0</div>
+          <div class="showcase-item" style="order: -1">order: -1</div>
+          <div class="showcase-item" style="order: 4">order: 4</div>
+          <div class="showcase-item" style="order: 2">order: 2</div>
+        </div>
+      </div>
+
+      <!-- FLEX-GROW SHOWCASE -->
+      <div class="section">
+        <h2>flex-grow | default: 0</h2>
+        <div class="showcase-box flex flex-grow-showcase">
+          <div class="showcase-item">flex-grow: 0</div>
+          <div class="showcase-item" style="flex-grow: 1">flex-grow: 1</div>
+          <div class="showcase-item" style="flex-grow: 2">flex-grow: 2</div>
+          <div class="showcase-item" style="flex-grow: 1">flex-grow: 1</div>
+        </div>
+      </div>
+
+      <!-- FLEX-SHRINK SHOWCASE -->
+      <div class="section">
+        <h2>flex-shrink | default: 1</h2>
+        <div class="showcase-box flex flex-grow-showcase">
+          <div class="showcase-item" style="flex-shrink: 1">flex-shrink: 1</div>
+          <div class="showcase-item" style="flex-shrink: 0">
+            flex-shrink: 0<br />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, deleniti.
+          </div>
+          <div class="showcase-item" style="flex-shrink: 1">flex-shrink: 1</div>
+        </div>
+      </div>
+
+      <!-- ALIGN-SELF SHOWCASE -->
+      <div class="section">
+        <h2>align-self | default: auto</h2>
+        <div style="height: 300px" class="showcase-box flex align-items-flex-start showcase-box--ai">
+          <div class="showcase-item" style="align-self: center">align-self: center</div>
+          <div class="showcase-item" style="align-self: flex-start">align-self: flex-start</div>
+          <div class="showcase-item" style="align-self: flex-end">align-self: flex-end</div>
+          <div class="showcase-item" style="align-self: baseline first">Item 4 (default)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="grid" class="container">
+      <h1 class="big-title">Grid</h1>
+
+      <!-- TERMINOLOGY -->
+      <div class="section">
+        <h1>Terminology</h1>
+        <div data-additional-classes="grid" class="showcase-box grid">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+        </div>
+        <div class="labels">
+          <div class="label">
+            <div class="color-circle color-circle--main"></div>
+            <div class="label-text"><b>Grid Container</b></div>
+          </div>
+          <div class="label">
+            <div class="color-circle color-circle--secondary"></div>
+            <div class="label-text"><b>Grid Item</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARENT-PROPERTIES -->
+      <div class="section">
+        <h1>Properties for the Parent (grid-container)</h1>
+        <ul class="spaced-list">
+          <li>Remember to setup <code>display: grid;</code> on parent element</li>
+          <li>grid-line, grid-track, grid-area</li>
+          <li><code>grid-template-columns, grid-template-rows</code></li>
+          <li><code>grid-template-areas</code> & <code>grid-area</code></li>
+          <li><code>column-gap</code>, <code>row-gap</code> & <code>gap</code></li>
+          <li><code>justify-items</code>, <code>align-items</code> & <code>place-items</code></li>
+          <li><code>grid-column</code> & <code>grid-row</code></li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

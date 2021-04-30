@@ -1,0 +1,6 @@
+#flex {
+  --accent-main: var(--blue-300);
+  --accent-secondary: var(--green-400);
+  display: flex;
+  flex-direction: column;
+}

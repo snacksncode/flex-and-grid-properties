@@ -1,0 +1,44 @@
+.toggle-flex-direction {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+  label {
+    user-select: none;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  .toggle {
+    --easing: cubic-bezier(0.83, 0, 0.17, 1);
+    order: -1;
+    width: 40px;
+    height: 10px;
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--bg-clr-200);
+    cursor: pointer;
+    transition: background-color 250ms var(--easing);
+    &__ball {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: var(--text-clr-400);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      transition: transform 250ms var(--easing);
+    }
+    &--active {
+      background-color: var(--accent-secondary);
+      .toggle__ball {
+        transform: translate(20px, -50%);
+      }
+    }
+  }
+}

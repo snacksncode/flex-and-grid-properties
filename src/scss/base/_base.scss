@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bg-clr-400);
+  color: var(--text-clr-400);
+}
+
+.fa-exclamation-triangle {
+  color: var(--yellow-400);
+}
+
+code {
+  background-color: var(--bg-clr-200);
+  border: 1px solid var(--accent-main);
+  padding: 0.25em 0.5em;
+  border-radius: var(--border-radius);
+}

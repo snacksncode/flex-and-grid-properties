@@ -1,0 +1,66 @@
+.button {
+  --color: var(--text-clr-500);
+  --bs: 2px;
+  --easing: cubic-bezier(0.83, 0, 0.17, 1);
+  display: inline-block;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--color);
+  padding: 0.5em 1.5em;
+  font-weight: 700;
+  z-index: 1;
+  position: relative;
+  transition: color 350ms;
+  transition-timing-function: var(--easing);
+  user-select: none;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &::before {
+    border: var(--bs) solid var(--color);
+    border-radius: var(--border-radius);
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 350ms;
+    transition-timing-function: var(--easing);
+  }
+  &::after {
+    z-index: -2;
+    background-color: var(--color);
+    border-radius: var(--border-radius);
+    transform: scale(0.6);
+    transform-origin: center center;
+    opacity: 0;
+    transition: opacity 350ms, transform 350ms, background-color 350ms;
+    transition-timing-function: var(--easing);
+  }
+  &--accent {
+    --color: var(--accent-400);
+    &:hover {
+      color: var(--text-clr-400) !important;
+    }
+  }
+  &--active {
+    --color: var(--green-500);
+    color: var(--text-clr-400) !important;
+  }
+  &:hover,
+  &--active {
+    &::after {
+      transform: scale(1);
+      opacity: 1;
+    }
+    &::before {
+      opacity: 0;
+    }
+  }
+  &:hover {
+    color: var(--bg-clr-400);
+  }
+}

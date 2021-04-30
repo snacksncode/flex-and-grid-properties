@@ -1,0 +1,9 @@
+.controls {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  & > .button + .button {
+    margin-left: 2rem;
+  }
+}
