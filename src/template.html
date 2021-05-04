@@ -8,6 +8,8 @@
   </head>
   <body class="no-transition">
     <section id="flex" class="container">
+      <!-- ! FLEX SECTION -->
+
       <h1 class="big-title">FlexBox</h1>
 
       <!-- TERMINOLOGY -->
@@ -63,7 +65,7 @@
         <h2>flex-direction</h2>
         <div class="toggle-flex-direction">
           <label for="toggle-flex-direction-ai">Show axis</label>
-          <div class="toggle" data-set-class="show-axis" data-target-id="fd">
+          <div class="toggle" data-add-class="show-axis" data-target-id="fd">
             <div class="toggle__ball"></div>
           </div>
         </div>
@@ -83,36 +85,12 @@
         </div>
       </div>
 
-      <!-- ALIGN-ITEMS -->
-      <div class="section">
-        <h2>align-items</h2>
-        <div class="toggle-flex-direction">
-          <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
-          <div class="toggle" data-set-class="flex-direction-column" data-target-id="ai">
-            <div class="toggle__ball"></div>
-          </div>
-        </div>
-        <div class="controls">
-          <div class="button" data-target-id="ai" data-set-class="align-items-flex-start">flex-start</div>
-          <div class="button" data-target-id="ai" data-set-class="align-items-flex-end">flex-end</div>
-          <div class="button" data-target-id="ai" data-set-class="align-items-center">center</div>
-          <div class="button button--active" data-target-id="ai" data-set-class="align-items-flex-stretch">stretch</div>
-          <div class="button" data-target-id="ai" data-set-class="align-items-baseline">baseline</div>
-        </div>
-        <div id="ai" data-additional-classes="showcase-box--ai flex" class="showcase-box flex showcase-box--ai">
-          <div class="showcase-item">Item 1</div>
-          <div class="showcase-item">Item 2</div>
-          <div class="showcase-item">Item 3</div>
-          <div class="showcase-item">Item 4</div>
-        </div>
-      </div>
-
       <!-- JUSTIFY-CONTENT -->
       <div class="section">
-        <h2>justify-content</h2>
+        <h2>justify-content | main-axis</h2>
         <div class="toggle-flex-direction">
           <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
-          <div class="toggle" data-set-class="flex-direction-column" data-additional-classes="static-height" data-target-id="jc">
+          <div class="toggle" data-add-class="flex-direction-column static-height" data-target-id="jc">
             <div class="toggle__ball"></div>
           </div>
         </div>
@@ -132,12 +110,36 @@
         </div>
       </div>
 
-      <!-- JUSTIFY-CONTENT -->
+      <!-- ALIGN-ITEMS -->
+      <div class="section">
+        <h2>align-items | cross-axis</h2>
+        <div class="toggle-flex-direction">
+          <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
+          <div class="toggle" data-add-class="flex-direction-column" data-target-id="ai">
+            <div class="toggle__ball"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="button" data-target-id="ai" data-set-class="align-items-flex-start">flex-start</div>
+          <div class="button" data-target-id="ai" data-set-class="align-items-flex-end">flex-end</div>
+          <div class="button" data-target-id="ai" data-set-class="align-items-center">center</div>
+          <div class="button button--active" data-target-id="ai" data-set-class="align-items-flex-stretch">stretch</div>
+          <div class="button" data-target-id="ai" data-set-class="align-items-baseline">baseline</div>
+        </div>
+        <div id="ai" data-additional-classes="showcase-box--ai flex" class="showcase-box flex showcase-box--ai">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+        </div>
+      </div>
+
+      <!-- FLEX-WRAP -->
       <div class="section">
         <h2>flex-wrap</h2>
         <div class="toggle-flex-direction">
           <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
-          <div class="toggle" data-set-class="flex-direction-column" data-additional-classes="static-height" data-target-id="fw">
+          <div class="toggle" data-add-class="flex-direction-column static-height" data-target-id="fw">
             <div class="toggle__ball"></div>
           </div>
         </div>
@@ -235,12 +237,15 @@
       </div>
     </section>
 
+    <!-- ! GRID SECTION -->
     <section id="grid" class="container">
       <h1 class="big-title">Grid</h1>
 
       <!-- TERMINOLOGY -->
-      <div class="section">
+      <div class="terminology section">
         <h1>Terminology</h1>
+
+        <h2 class="terminology__heading">Naming</h2>
         <div data-additional-classes="grid" class="showcase-box grid">
           <div class="showcase-item">Item 1</div>
           <div class="showcase-item">Item 2</div>
@@ -257,6 +262,73 @@
             <div class="label-text"><b>Grid Item</b></div>
           </div>
         </div>
+
+        <h2 class="terminology__heading">Grid-Lines</h2>
+        <div class="showcase-box grid two-by-three grid-line">
+          <div class="lines">
+            <div class="row-start"></div>
+            <div class="row-2"></div>
+            <div class="row-3"></div>
+            <div class="row-end"></div>
+            <div class="column-start"></div>
+            <div class="column-2"></div>
+            <div class="column-end"></div>
+          </div>
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+          <div class="showcase-item">Item 5</div>
+          <div class="showcase-item">Item 6</div>
+        </div>
+
+        <h2 class="terminology__heading">Grid-Cell</h2>
+        <div class="showcase-box grid two-by-two grid-cell">
+          <div class="grid-highlight"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+        </div>
+
+        <h2 class="terminology__heading">Grid-Track (aka. Row or Column)</h2>
+        <div class="showcase-box grid three-by-three grid-track">
+          <div class="grid-highlight"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+        </div>
+        <div class="showcase-box grid four-by-two grid-track grid-track--second">
+          <div class="grid-highlight"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+        </div>
+
+        <h2 class="terminology__heading">Grid-Area</h2>
+        <div class="showcase-box grid three-by-three grid-area">
+          <div class="grid-highlight"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+          <div class="showcase-item"></div>
+        </div>
       </div>
 
       <!-- PARENT-PROPERTIES -->
@@ -264,7 +336,6 @@
         <h1>Properties for the Parent (grid-container)</h1>
         <ul class="spaced-list">
           <li>Remember to setup <code>display: grid;</code> on parent element</li>
-          <li>grid-line, grid-track, grid-area</li>
           <li><code>grid-template-columns, grid-template-rows</code></li>
           <li><code>grid-template-areas</code> & <code>grid-area</code></li>
           <li><code>column-gap</code>, <code>row-gap</code> & <code>gap</code></li>

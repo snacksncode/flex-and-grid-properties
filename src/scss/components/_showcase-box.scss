@@ -298,8 +298,225 @@
 
   &.grid {
     display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    & > .showcase-item {
+      margin: 0;
+    }
     & > .showcase-item::after {
       opacity: calc(var(--background-opacity) + 0.1);
+    }
+    &.two-by-two {
+      grid: 1fr 1fr / 1fr 1fr;
+    }
+    &.three-by-two {
+      grid: 1fr 1fr / 1fr 1fr 1fr;
+    }
+    &.two-by-three {
+      grid: 1fr 1fr 1fr / 1fr 1fr;
+    }
+    &.three-by-three {
+      grid: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    }
+    &.four-by-two {
+      grid: 1fr 1fr / 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .grid-highlight {
+    --highlight-opacity: 0.5;
+    position: absolute;
+    width: calc(50% - 1.5rem);
+    height: calc(50% - 1.5rem);
+    border-radius: var(--border-radius);
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, var(--highlight-opacity)),
+      rgba(0, 0, 0, var(--highlight-opacity)) 10px,
+      rgba(255, 255, 255, var(--highlight-opacity)) 10px,
+      rgba(255, 255, 255, var(--highlight-opacity)) 20px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+      content: "Highlight Name";
+      padding: 0.5em 1.5em;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      box-shadow: 0 0 8px rgba(black, 0.25);
+      background-color: var(--bg-clr-400);
+      font-weight: 700;
+    }
+  }
+
+  &.grid-cell {
+    z-index: 1;
+    .grid-highlight {
+      &::after {
+        content: "Grid Cell";
+      }
+    }
+  }
+
+  &.grid-area {
+    .grid-highlight {
+      width: calc(66.66% - 1.65rem);
+      height: calc(66.66% - 1.65rem);
+      &::after {
+        content: "Grid Area";
+      }
+    }
+  }
+
+  &.grid-track {
+    z-index: 1;
+    & + .grid-track {
+      margin-top: 1rem;
+    }
+    .grid-highlight {
+      top: 50%;
+      width: calc(100% - 2rem);
+      height: 54px;
+      transform: translateY(-50%);
+      &::after {
+        content: "Grid Track";
+      }
+    }
+    &--second {
+      .grid-highlight {
+        top: 1rem;
+        left: calc(50% + 0.5rem);
+        width: calc(25% - 1.25rem);
+        height: calc(100% - 2rem);
+        transform: none;
+        &::after {
+          content: "Grid Track";
+        }
+      }
+    }
+  }
+
+  &.grid-line {
+    margin: 6rem 0 6rem;
+    .lines {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      > div {
+        position: absolute;
+        background: var(--text-clr-400);
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 2px black;
+        &::before,
+        &::after {
+          position: absolute;
+          background-color: var(--bg-clr-200);
+          padding: 0.25em 0.5em;
+          border-radius: 4px;
+        }
+      }
+      [class^="row"] {
+        width: calc(100% + 4rem);
+        height: 2px;
+        left: 50%;
+        &::before {
+          top: 50%;
+          left: -4.5rem;
+          transform: translateY(-50%);
+          text-align: right;
+        }
+        &::after {
+          top: 50%;
+          right: -4.5rem;
+          transform: translateY(-60%);
+        }
+      }
+      [class^="column"] {
+        width: 2px;
+        height: calc(100% + 4rem);
+        top: 50%;
+        &::before {
+          top: -2.5rem;
+          left: 50%;
+          white-space: nowrap;
+          transform: translateX(-50%);
+        }
+        &::after {
+          bottom: -2.5rem;
+          left: 50%;
+          white-space: nowrap;
+          transform: translateX(-50%);
+        }
+      }
+      .row-start {
+        top: 0.5rem;
+        &::before {
+          content: "Row 1";
+        }
+        &::after {
+          content: "Row -4";
+        }
+      }
+      .row-2 {
+        top: 34%;
+        &::before {
+          content: "Row 2";
+        }
+        &::after {
+          content: "Row -2";
+        }
+      }
+      .row-3 {
+        top: 66%;
+        &::before {
+          content: "Row 3";
+        }
+        &::after {
+          content: "Row -2";
+        }
+      }
+      .row-end {
+        top: calc(100% - 0.5rem);
+        &::before {
+          content: "Row 4";
+        }
+        &::after {
+          content: "Row -1";
+        }
+      }
+      .column-start {
+        left: 0.5rem;
+        &::before {
+          content: "Column 1";
+        }
+        &::after {
+          content: "Column -3";
+        }
+      }
+      .column-2 {
+        left: 50%;
+        &::before {
+          content: "Column 2";
+        }
+        &::after {
+          content: "Column -2";
+        }
+      }
+      .column-end {
+        left: calc(100% - 0.5rem);
+        &::before {
+          content: "Column 3";
+        }
+        &::after {
+          content: "Column -1";
+        }
+      }
     }
   }
 

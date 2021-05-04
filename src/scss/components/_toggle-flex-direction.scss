@@ -8,6 +8,9 @@
     cursor: pointer;
     margin-left: 1rem;
     font-size: 0.9rem;
+    code {
+      margin-left: 0.5rem;
+    }
   }
   input[type="checkbox"] {
     display: none;
