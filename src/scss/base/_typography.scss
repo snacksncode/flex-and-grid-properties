@@ -11,3 +11,28 @@ h6 {
   font-family: "Noto Serif", serif;
   color: var(--accent-main);
 }
+
+.heading {
+  &--white {
+    color: var(--text-clr-400);
+  }
+  &--sticky {
+    position: sticky;
+    top: 0;
+    padding: 1rem 0;
+    z-index: 10;
+    margin-bottom: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      box-shadow: 0 0 15px var(--bg-clr-400);
+      width: 100vw;
+      height: 100%;
+      top: 0;
+      z-index: -1;
+      background-color: var(--bg-clr-400);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

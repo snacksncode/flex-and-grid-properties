@@ -1,4 +1,6 @@
 import "../scss/main.scss";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/prism";
 import { handleControlButtonClick } from "./utils/handleControlButton";
 import { handleToggleClick } from "./utils/handleToggle";
 

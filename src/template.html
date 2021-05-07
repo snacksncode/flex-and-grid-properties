@@ -14,7 +14,7 @@
 
       <!-- TERMINOLOGY -->
       <div class="terminology section">
-        <h1>Terminology</h1>
+        <h1 class="heading--sticky">Terminology</h1>
 
         <!-- NAMING -->
         <h2 class="terminology__heading">Naming</h2>
@@ -50,7 +50,7 @@
 
       <!-- PARENT-PROPERTIES -->
       <div class="section">
-        <h1>Properties for the Parent (flex container)</h1>
+        <h1 class="heading--sticky">Properties for the Parent (flex container)</h1>
         <ul class="spaced-list">
           <li>Remember to setup <code>display: flex;</code> on parent for it to be a flex-container</li>
           <li><code>flex-direction</code></li>
@@ -62,7 +62,7 @@
 
       <!-- FLEX-DIRECTION -->
       <div class="section">
-        <h2>flex-direction</h2>
+        <h2 class="heading--sticky">flex-direction</h2>
         <div class="toggle-flex-direction">
           <label for="toggle-flex-direction-ai">Show axis</label>
           <div class="toggle" data-add-class="show-axis" data-target-id="fd">
@@ -87,7 +87,7 @@
 
       <!-- JUSTIFY-CONTENT -->
       <div class="section">
-        <h2>justify-content | main-axis</h2>
+        <h2 class="heading--sticky">justify-content | main-axis</h2>
         <div class="toggle-flex-direction">
           <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
           <div class="toggle" data-add-class="flex-direction-column static-height" data-target-id="jc">
@@ -112,7 +112,7 @@
 
       <!-- ALIGN-ITEMS -->
       <div class="section">
-        <h2>align-items | cross-axis</h2>
+        <h2 class="heading--sticky">align-items | cross-axis</h2>
         <div class="toggle-flex-direction">
           <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
           <div class="toggle" data-add-class="flex-direction-column" data-target-id="ai">
@@ -136,7 +136,7 @@
 
       <!-- FLEX-WRAP -->
       <div class="section">
-        <h2>flex-wrap</h2>
+        <h2 class="heading--sticky">flex-wrap</h2>
         <div class="toggle-flex-direction">
           <label for="toggle-flex-direction-ai">Enable <code>flex-direction: column</code></label>
           <div class="toggle" data-add-class="flex-direction-column static-height" data-target-id="fw">
@@ -182,7 +182,7 @@
 
       <!-- CHILD-PROPERTIES -->
       <div class="child-properties section">
-        <h1>Properties for the Children (flex items)</h1>
+        <h1 class="heading--sticky">Properties for the Children (flex items)</h1>
         <ul class="spaced-list">
           <li><code>order</code></li>
           <li><code>flex-grow</code> <img src="assets/alert-triangle.svg" alt="warning" /></li>
@@ -193,7 +193,7 @@
 
       <!-- ORDER SHOWCASE -->
       <div class="section">
-        <h2>order | default: 0</h2>
+        <h2 class="heading--sticky">order | default: 0</h2>
         <div class="showcase-box flex">
           <div class="showcase-item">order: 0</div>
           <div class="showcase-item" style="order: -1">order: -1</div>
@@ -204,7 +204,7 @@
 
       <!-- FLEX-GROW SHOWCASE -->
       <div class="section">
-        <h2>flex-grow | default: 0</h2>
+        <h2 class="heading--sticky">flex-grow | default: 0</h2>
         <div class="showcase-box flex flex-grow-showcase">
           <div class="showcase-item">flex-grow: 0</div>
           <div class="showcase-item" style="flex-grow: 1">flex-grow: 1</div>
@@ -215,7 +215,7 @@
 
       <!-- FLEX-SHRINK SHOWCASE -->
       <div class="section">
-        <h2>flex-shrink | default: 1</h2>
+        <h2 class="heading--sticky">flex-shrink | default: 1</h2>
         <div class="showcase-box flex flex-grow-showcase">
           <div class="showcase-item" style="flex-shrink: 1">flex-shrink: 1</div>
           <div class="showcase-item" style="flex-shrink: 0">
@@ -227,13 +227,26 @@
 
       <!-- ALIGN-SELF SHOWCASE -->
       <div class="section">
-        <h2>align-self | default: auto</h2>
+        <h2 class="heading--sticky">align-self | default: auto</h2>
         <div style="height: 300px" class="showcase-box flex align-items-flex-start showcase-box--ai">
           <div class="showcase-item" style="align-self: center">align-self: center</div>
           <div class="showcase-item" style="align-self: flex-start">align-self: flex-start</div>
           <div class="showcase-item" style="align-self: flex-end">align-self: flex-end</div>
           <div class="showcase-item" style="align-self: baseline first">Item 4 (default)</div>
         </div>
+      </div>
+
+      <div class="section">
+        <h1 class="heading--sticky">Stuff that wasn't covered</h1>
+        <h2 class="heading--white">Container properties:</h2>
+        <ul class="spaced-list">
+          <li><code>inline-flex</code></li>
+          <li><code>flex-flow</code> - This is a shorthand for the flex-direction and flex-wrap properties.</li>
+        </ul>
+        <h2 class="heading--white">Properties for items:</h2>
+        <ul class="spaced-list">
+          <li><code>flex-basis</code></li>
+        </ul>
       </div>
     </section>
 
@@ -243,8 +256,9 @@
 
       <!-- TERMINOLOGY -->
       <div class="terminology section">
-        <h1>Terminology</h1>
+        <h1 class="heading--sticky">Terminology</h1>
 
+        <!-- NAMING -->
         <h2 class="terminology__heading">Naming</h2>
         <div data-additional-classes="grid" class="showcase-box grid">
           <div class="showcase-item">Item 1</div>
@@ -263,6 +277,7 @@
           </div>
         </div>
 
+        <!-- GRID-LINES -->
         <h2 class="terminology__heading">Grid-Lines</h2>
         <div class="showcase-box grid two-by-three grid-line">
           <div class="lines">
@@ -282,6 +297,7 @@
           <div class="showcase-item">Item 6</div>
         </div>
 
+        <!-- GRID-CELL -->
         <h2 class="terminology__heading">Grid-Cell</h2>
         <div class="showcase-box grid two-by-two grid-cell">
           <div class="grid-highlight"></div>
@@ -291,6 +307,7 @@
           <div class="showcase-item"></div>
         </div>
 
+        <!-- GRID-TRACK -->
         <h2 class="terminology__heading">Grid-Track (aka. Row or Column)</h2>
         <div class="showcase-box grid three-by-three grid-track">
           <div class="grid-highlight"></div>
@@ -316,6 +333,7 @@
           <div class="showcase-item"></div>
         </div>
 
+        <!-- GRID-AREA -->
         <h2 class="terminology__heading">Grid-Area</h2>
         <div class="showcase-box grid three-by-three grid-area">
           <div class="grid-highlight"></div>
@@ -333,14 +351,497 @@
 
       <!-- PARENT-PROPERTIES -->
       <div class="section">
-        <h1>Properties for the Parent (grid-container)</h1>
+        <h1 class="heading--sticky">Properties for the Parent (grid-container)</h1>
         <ul class="spaced-list">
           <li>Remember to setup <code>display: grid;</code> on parent element</li>
           <li><code>grid-template-columns, grid-template-rows</code></li>
-          <li><code>grid-template-areas</code> & <code>grid-area</code></li>
           <li><code>column-gap</code>, <code>row-gap</code> & <code>gap</code></li>
-          <li><code>justify-items</code>, <code>align-items</code> & <code>place-items</code></li>
+          <li><code>justify-items</code>, <code>align-items</code>, <code>justify-content</code> & <code>align-content</code></li>
+          <li><code>grid-template-areas</code></li>
+        </ul>
+      </div>
+
+      <!-- GRID-TEMPLATE-COLUMNS -->
+      <div class="section">
+        <h2 class="heading--sticky">Setting up columns</h2>
+
+        <h3 class="heading--white">with pixels</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 150px 250px 350px;
+}</code></pre>
+        <div class="showcase-box grid grid-template-columns--first">
+          <div class="showcase-item">150px</div>
+          <div class="showcase-item">250px</div>
+          <div class="showcase-item">350px</div>
+          <div class="showcase-item">150px</div>
+          <div class="showcase-item">250px</div>
+          <div class="showcase-item">350px</div>
+        </div>
+
+        <h3 class="heading--white">with percentages</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}</code></pre>
+        <div class="showcase-box grid grid-template-columns--second">
+          <div class="showcase-item">40%</div>
+          <div class="showcase-item">60%</div>
+        </div>
+
+        <h3 class="heading--white">with franction units (fr)</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}</code></pre>
+        <div class="showcase-box grid grid-template-columns--third">
+          <div class="showcase-item">1fr</div>
+          <div class="showcase-item">1fr</div>
+        </div>
+
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}</code></pre>
+        <div class="showcase-box grid grid-template-columns--fourth">
+          <div class="showcase-item">1fr</div>
+          <div class="showcase-item">2fr</div>
+          <div class="showcase-item">1fr</div>
+        </div>
+
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 200px 3fr 1fr;
+}</code></pre>
+        <div class="showcase-box grid grid-template-columns--fifth">
+          <div class="showcase-item">200px</div>
+          <div class="showcase-item">3fr</div>
+          <div class="showcase-item">1fr</div>
+        </div>
+
+        <h3 class="heading--white">with auto</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}</code></pre>
+        <div class="showcase-box grid grid-template-columns--sixth">
+          <div class="showcase-item">Lorem ipsum dolor sit amet.</div>
+          <div class="showcase-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo officiis libero illum laudantium voluptate provident
+            molestiae distinctio rem praesentium sequi.
+          </div>
+        </div>
+      </div>
+
+      <!-- GRID-TEMPLATE-ROWS -->
+      <div class="section">
+        <h2 class="heading--sticky">Setting up rows</h2>
+
+        <h3 class="heading--white">with pixels</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 200px;
+}</code></pre>
+        <div class="showcase-box grid grid-template-rows--first">
+          <div class="showcase-item">100px</div>
+          <div class="showcase-item">200px</div>
+        </div>
+
+        <h3 class="heading--white">with franction units (fr)</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+}</code></pre>
+        <div class="showcase-box grid grid-template-rows--second">
+          <div class="showcase-item">1fr</div>
+          <div class="showcase-item">2fr</div>
+        </div>
+
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}</code></pre>
+        <div class="showcase-box grid grid-template-rows--third">
+          <div class="showcase-item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus porro inventore amet voluptate, accusamus
+            obcaecati placeat, iure perspiciatis officiis tenetur tempora labore laudantium quaerat voluptatem error omnis
+            similique excepturi enim? Pariatur, quis totam? Cupiditate, reprehenderit architecto ab esse iusto quo!
+          </div>
+          <div class="showcase-item">Lorem ipsum dolor sit amet.</div>
+        </div>
+
+        <h3 class="heading--white">with auto</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}</code></pre>
+        <div class="showcase-box grid grid-template-rows--fourth">
+          <div class="showcase-item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus porro inventore amet voluptate, accusamus
+            obcaecati placeat, iure perspiciatis officiis tenetur tempora labore laudantium quaerat voluptatem error omnis
+            similique excepturi enim? Pariatur, quis totam? Cupiditate, reprehenderit architecto ab esse iusto quo!
+          </div>
+          <div class="showcase-item">Lorem ipsum dolor sit amet.</div>
+        </div>
+      </div>
+
+      <!-- GAPS -->
+      <div class="section">
+        <h2 class="heading--sticky">Gaps</h2>
+
+        <h3 class="heading--white">Both axis</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem; /* px, rem, em, ... */
+}</code></pre>
+        <div class="showcase-box grid grid-gap">
+          <div class="showcase-item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus porro inventore amet voluptate, accusamus
+            obcaecati placeat, iure perspiciatis officiis tenetur tempora labore laudantium quaerat voluptatem error omnis
+            similique excepturi enim? Pariatur, quis totam? Cupiditate, reprehenderit architecto ab esse iusto quo!
+          </div>
+          <div class="showcase-item">Lorem ipsum dolor sit amet.</div>
+          <div class="showcase-item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus porro inventore amet voluptate, accusamus
+            obcaecati placeat, iure perspiciatis officiis tenetur.
+          </div>
+          <div class="showcase-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias tempora animi distinctio aperiam amet iusto
+            veritatis laborum rerum architecto.
+          </div>
+        </div>
+
+        <h3 class="heading--white">Between columns</h3>
+        <pre><code class="language-css">.grid-container {
+  /* ... */
+  column-gap: 1rem;
+}</code></pre>
+        <div class="showcase-box grid grid-gap grid-gap--column">
+          <div class="showcase-item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus porro inventore amet voluptate, accusamus
+            obcaecati placeat, iure perspiciatis officiis tenetur tempora labore laudantium quaerat voluptatem error omnis
+            similique excepturi enim? Pariatur, quis totam? Cupiditate, reprehenderit architecto ab esse iusto quo!
+          </div>
+          <div class="showcase-item">Lorem ipsum dolor sit amet.</div>
+          <div class="showcase-item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus porro inventore amet voluptate, accusamus
+            obcaecati placeat, iure perspiciatis officiis tenetur.
+          </div>
+          <div class="showcase-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias tempora animi distinctio aperiam amet iusto
+            veritatis laborum rerum architecto.
+          </div>
+        </div>
+
+        <h3 class="heading--white">Between rows</h3>
+        <pre><code class="language-css">.grid-container {
+  /* ... */
+  row-gap: 1rem;
+}</code></pre>
+        <div class="showcase-box grid grid-gap grid-gap--row">
+          <div class="showcase-item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus porro inventore amet voluptate, accusamus
+            obcaecati placeat, iure perspiciatis officiis tenetur tempora labore laudantium quaerat voluptatem error omnis
+            similique excepturi enim? Pariatur, quis totam? Cupiditate, reprehenderit architecto ab esse iusto quo!
+          </div>
+          <div class="showcase-item">Lorem ipsum dolor sit amet.</div>
+          <div class="showcase-item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus porro inventore amet voluptate, accusamus
+            obcaecati placeat, iure perspiciatis officiis tenetur.
+          </div>
+          <div class="showcase-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias tempora animi distinctio aperiam amet iusto
+            veritatis laborum rerum architecto.
+          </div>
+        </div>
+      </div>
+
+      <!-- JUSTIFY-CONTENT, ALIGN-ITEMS -->
+      <div class="section">
+        <h2 class="heading--sticky">Positioning elements within cell</h2>
+
+        <h3 class="heading--white">align-items</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 150px;
+  gap: 1rem;
+  align-items: flex-start | flex-end | center | stretch | baseline;
+}
+
+.grid-item {
+  width: 50%;
+  height: 65%;
+}</code></pre>
+        <div class="controls">
+          <div class="button" data-target-id="g-ai" data-set-class="align-items-flex-start">flex-start</div>
+          <div class="button" data-target-id="g-ai" data-set-class="align-items-flex-end">flex-end</div>
+          <div class="button" data-target-id="g-ai" data-set-class="align-items-center">center</div>
+          <div class="button button--active" data-target-id="g-ai" data-set-class="align-items-flex-stretch">stretch</div>
+          <div class="button" data-target-id="g-ai" data-set-class="align-items-baseline">baseline</div>
+        </div>
+        <div id="g-ai" data-additional-classes="grid grid-positioning" class="showcase-box grid grid-positioning">
+          <div class="showcase-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+          <div class="showcase-item">Lorem ipsum dolor sit amet.</div>
+          <div class="showcase-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus</div>
+          <div class="showcase-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias</div>
+        </div>
+
+        <h3 class="heading--white">justify-items</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 150px;
+  gap: 1rem;
+  justify-items: flex-start | flex-end | center | space-between | space-around | space-evenly;
+}
+
+.grid-item {
+  width: 50%;
+  height: 65%;
+}</code></pre>
+        <div class="controls">
+          <div class="button button--active" data-target-id="g-ji" data-set-class="justify-items-flex-start">flex-start</div>
+          <div class="button" data-target-id="g-ji" data-set-class="justify-items-flex-end">flex-end</div>
+          <div class="button" data-target-id="g-ji" data-set-class="justify-items-center">center</div>
+          <div class="button" data-target-id="g-ji" data-set-class="justify-items-space-between">space-between</div>
+          <div class="button" data-target-id="g-ji" data-set-class="justify-items-space-around">space-around</div>
+          <div class="button" data-target-id="g-ji" data-set-class="justify-items-space-evenly">space-evenly</div>
+        </div>
+        <div id="g-ji" data-additional-classes="grid grid-positioning" class="showcase-box grid grid-positioning">
+          <div class="showcase-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+          <div class="showcase-item">Lorem ipsum dolor sit amet.</div>
+          <div class="showcase-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus</div>
+          <div class="showcase-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias</div>
+        </div>
+      </div>
+      <div class="section">
+        <h2 class="heading--sticky">Positioning grid itself</h2>
+
+        <h3 class="heading--white">justify-content</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 100px 100px;
+  height: 400px;
+  gap: 1rem;
+  justify-content: start | end | center | space-around | space-between | space-evenly;
+}
+
+.grid-item {
+  width: 50%;
+  height: 65%;
+}</code></pre>
+        <div class="controls">
+          <div class="button button--active" data-target-id="g-jc" data-set-class="justify-content-start">flex-start</div>
+          <div class="button" data-target-id="g-jc" data-set-class="justify-content-end">flex-end</div>
+          <div class="button" data-target-id="g-jc" data-set-class="justify-content-center">center</div>
+          <div class="button" data-target-id="g-jc" data-set-class="justify-content-space-around">space-around</div>
+          <div class="button" data-target-id="g-jc" data-set-class="justify-content-space-between">space-between</div>
+          <div class="button" data-target-id="g-jc" data-set-class="justify-content-space-evenly">space-evenly</div>
+        </div>
+        <div id="g-jc" data-additional-classes="grid grid-positioning--static" class="showcase-box grid grid-positioning--static">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+        </div>
+
+        <h3 class="heading--white">align-content</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 100px 100px;
+  height: 400px;
+  gap: 1rem;
+  align-content: start | end | center | space-around | space-between | space-evenly;
+
+.grid-item {
+  width: 50%;
+  height: 65%;
+}</code></pre>
+        <div class="controls">
+          <div class="button button--active" data-target-id="g-ac" data-set-class="align-content-start">start</div>
+          <div class="button" data-target-id="g-ac" data-set-class="align-content-end">end</div>
+          <div class="button" data-target-id="g-ac" data-set-class="align-content-center">center</div>
+          <div class="button" data-target-id="g-ac" data-set-class="align-content-space-around">space-around</div>
+          <div class="button" data-target-id="g-ac" data-set-class="align-content-space-between">space-between</div>
+          <div class="button" data-target-id="g-ac" data-set-class="align-content-space-evenly">space-evenly</div>
+        </div>
+        <div id="g-ac" data-additional-classes="grid grid-positioning--static" class="showcase-box grid grid-positioning--static">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+        </div>
+      </div>
+
+      <!-- CHILD-PROPERTIES -->
+      <div class="section">
+        <h1 class="heading--sticky">Properties for the Child (grid-item)</h1>
+        <ul class="spaced-list">
           <li><code>grid-column</code> & <code>grid-row</code></li>
+          <li><code>grid-area</code></li>
+          <li><code>align-self</code> & <code>justify-self</code></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2 class="heading--sticky">Positioning items on grid</h2>
+
+        <h3 class="heading--white">grid-column</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+
+.second-item {
+  grid-column: 2 / 4;
+}</code></pre>
+        <div class="showcase-box grid grid-column--first">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+          <div class="showcase-item">Item 5</div>
+          <div class="showcase-item">Item 6</div>
+          <div class="showcase-item">Item 7</div>
+        </div>
+
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+
+.third-item {
+  grid-column: span 2;
+}
+
+.sixth-item {
+  grid-column: span 3
+}</code></pre>
+        <div class="showcase-box grid grid-column--second">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+          <div class="showcase-item">Item 5</div>
+          <div class="showcase-item">Item 6</div>
+        </div>
+
+        <h3 class="heading--white">grid-row</h3>
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+
+.first-item {
+  grid-row: 1 / -1;
+}</code></pre>
+        <div class="showcase-box grid grid-row--first">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+          <div class="showcase-item">Item 5</div>
+          <div class="showcase-item">Item 6</div>
+          <div class="showcase-item">Item 7</div>
+          <div class="showcase-item">Item 8</div>
+          <div class="showcase-item">Item 9</div>
+        </div>
+
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+
+.second-item {
+  grid-row: span 4;
+}
+
+.fourth-item {
+  grid-row: span 4;
+}</code></pre>
+        <div class="showcase-box grid grid-row--second">
+          <div class="showcase-item">Item 1</div>
+          <div class="showcase-item">Item 2</div>
+          <div class="showcase-item">Item 3</div>
+          <div class="showcase-item">Item 4</div>
+          <div class="showcase-item">Item 5</div>
+          <div class="showcase-item">Item 6</div>
+          <div class="showcase-item">Item 7</div>
+          <div class="showcase-item">Item 8</div>
+          <div class="showcase-item">Item 9</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="heading--sticky">Positioning items on grid via areas</h2>
+
+        <pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+          "a a a d"
+          ". b b d"
+          "c c . d";
+  gap: 1rem;
+
+.item-a {
+  grid-area: a;
+}
+
+.item-b {
+  grid-area: b;
+}
+
+.item-c {
+  grid-area: c;
+}
+
+.item-d {
+  grid-area: d;
+}</code></pre>
+        <div class="showcase-box grid grid-area--first">
+          <div class="showcase-item">Item A</div>
+          <div class="showcase-item">Item B</div>
+          <div class="showcase-item">Item C</div>
+          <div class="showcase-item">Item D</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h1 class="heading--sticky">Stuff that wasn't covered</h1>
+        <h2 class="heading--white">Container properties:</h2>
+        <ul class="spaced-list">
+          <li><code>inline-grid</code></li>
+          <li>
+            <code>grid</code> - A shorthand for setting grid-template-rows, grid-template-columns, and grid-template-areas in a
+            single declaration.
+          </li>
+          <li>Row and column names like <code>[first]</code>, <code>[five]</code>, <code>[row1-start]</code>...</li>
+          <li><code>place-items</code> - sets both the align-items and justify-items properties in a single declaration</li>
+          <li><code>place-content</code> - sets both the align-content and justify-content properties in a single declaration</li>
+          <li><code>grid-auto-columns</code> & <code>grid-auto-rows</code></li>
+          <li><code>grid-auto-flow</code></li>
+          <li><code>repeat(auto-fill)</code>, <code>repeat(auto-fit)</code> & <code>minmax()</code></li>
+        </ul>
+        <h2 class="heading--white">Properties for items:</h2>
+        <ul class="spaced-list">
+          <li><code>justify-self</code>, <code>align-self</code> & <code>place-self</code></li>
+          <li><code>grid-area</code></li>
+          <li><code>align-self</code> & <code>justify-self</code></li>
         </ul>
       </div>
     </section>

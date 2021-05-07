@@ -11,6 +11,7 @@ html {
 body {
   background-color: var(--bg-clr-400);
   color: var(--text-clr-400);
+  overflow-x: hidden;
 }
 
 .fa-exclamation-triangle {
@@ -18,8 +19,14 @@ body {
 }
 
 code {
-  background-color: var(--bg-clr-200);
   border: 1px solid var(--accent-main);
+  background-color: var(--bg-clr-200);
   padding: 0.25em 0.5em;
   border-radius: var(--border-radius);
+}
+
+code[class^=" lang"],
+code[class^="lang"] {
+  border: none;
+  padding: 0;
 }
