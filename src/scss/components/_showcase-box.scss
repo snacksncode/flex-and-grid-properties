@@ -285,11 +285,11 @@
         transform: translateY(-55%);
       }
       .cross-axis::before {
-        border-left-color: transparent;
+        border-right-color: transparent;
         border-top-color: transparent;
         border-bottom-color: transparent;
         top: 50%;
-        left: -10px;
+        right: -10px;
         transform: translateY(-50%);
       }
     }
@@ -314,11 +314,11 @@
         transform: translateY(-55%);
       }
       .cross-axis::before {
-        border-left-color: transparent;
+        border-right-color: transparent;
         border-top-color: transparent;
         border-bottom-color: transparent;
         top: 50%;
-        left: -10px;
+        right: -10px;
         transform: translateY(-50%);
       }
     }
@@ -524,7 +524,7 @@
           content: "Row 2";
         }
         &::after {
-          content: "Row -2";
+          content: "Row -3";
         }
       }
       .row-3 {
