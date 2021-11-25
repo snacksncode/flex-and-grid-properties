@@ -5,18 +5,14 @@ Quick side-project. Simple visualization of different flex & grid properties and
 I might make it public someday but for now, download a repo do
 ```console
 yarn install
-```
-or
-```console
+# or
 npm install
 ```
 
 And then build it via
 ```console
 yarn build
-```
-or
-```console
+# or
 npm run build
 ```
 
